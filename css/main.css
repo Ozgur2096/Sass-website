@@ -1,3 +1,24 @@
+.container {
+  margin: auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+  height: 100%;
+}
+
+header div .container a button {
+  padding: 0.5rem 1rem;
+  font-size: large;
+  border-radius: 2rem;
+}
+header div .container a button {
+  background-color: #fbfbbc;
+  color: #1d6f9c;
+}
+header div .container a button:hover {
+  background-color: #aa4f4f;
+  color: #fbfbbc;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,32 +36,12 @@ a {
   color: black;
 }
 
-header div .container a button {
-  padding: 0.5rem 1rem;
-  font-size: large;
-  border-radius: 2rem;
-}
-header div .container a button {
-  background-color: rgba(70, 50, 20, 0.5);
-  color: #fbfbbc;
-}
-header div .container a button:hover {
-  background-color: #fbfbbc;
-  color: #aa4f4f;
-}
-.container {
-  margin: auto;
-  padding: 0 2rem;
-  max-width: 1200px;
-  height: 100%;
-}
-
 header {
   height: 100vh;
   background: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
 }
 header nav {
-  background-color: rgba(70, 50, 20, 0.5);
+  background-color: #6ebae4;
   color: #fbfbbc;
   height: 5rem;
 }
@@ -91,11 +92,16 @@ header div .container a {
   padding: 6rem 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 #articles .container h2 {
   grid-column: span 12;
+}
+#articles .container .article {
+  background-color: #d9edf8;
+  padding: 1rem;
+  line-height: 1.5;
 }
 #articles .container .article-1 {
   grid-column: span 8;

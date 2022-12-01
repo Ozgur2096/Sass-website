@@ -1,0 +1,30 @@
+.container {
+  margin: auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+  height: 100%;
+}
+
+%btn {
+  padding: 0.5rem 1rem;
+  font-size: large;
+  border-radius: 2rem;
+  &-dark {
+    @extend %btn;
+    background-color: $dark-color;
+    color: $light-color;
+    &:hover {
+      background-color: $light-color;
+      color: $primary-color;
+    }
+  }
+  &-light {
+    @extend %btn;
+    background-color: $light-color;
+    color: $secondary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $light-color;
+    }
+  }
+}

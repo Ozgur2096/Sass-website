@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'utilities';
+@import 'functions';
 *{
   box-sizing: border-box;
   margin: 0;
@@ -13,40 +15,12 @@ a {
   text-decoration: none;
   color: black;
 }
-%btn {
-  padding: 0.5rem 1rem;
-  font-size: large;
-  border-radius: 2rem;
-  &-dark {
-    @extend %btn;
-    background-color: $dark-color;
-    color: $light-color;
-    &:hover {
-      background-color: $light-color;
-      color: $primary-color;
-    }
-  }
-  &-light {
-    @extend %btn;
-    background-color: $light-color;
-    color: $secondary-color;
-    &:hover {
-      background-color: $primary-color;
-      color: $light-color;
-    }
-  }
-}
-.container {
-  margin: auto;
-  padding: 0 2rem;
-  max-width: 1200px;
-  height: 100%;
-}
+
 header {
   height: 100vh;
   background: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
   nav {
-    background-color: $dark-color;
+    background-color:lighten($secondary-color, $amount: 30);
     color: $light-color;
     height: 5rem;
     ul {
@@ -88,7 +62,7 @@ header {
       grid-column: span 12;
       align-self: flex-start;
       button {
-        @extend %btn-dark;
+        @extend %btn-light;
       }
     }
   }
@@ -101,10 +75,15 @@ header {
     padding: 6rem 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
     h2 {
       grid-column: span 12;
+    }
+    .article {
+      background-color: lighten($secondary-color, 55%);
+      padding: 1rem;
+      line-height: 1.5;
     }
     .article-1 {
       grid-column: span 8;
