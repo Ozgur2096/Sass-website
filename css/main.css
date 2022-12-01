@@ -1,4 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #333;
-  color: white;
+  background-color: #fbfbbc;
+  color: #aa4f4f;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header div .container a button {
+  padding: 0.5rem 1rem;
+  font-size: large;
+  border-radius: 2rem;
+}
+header div .container a button {
+  background-color: rgba(70, 50, 20, 0.5);
+  color: #fbfbbc;
+}
+header div .container a button:hover {
+  background-color: #fbfbbc;
+  color: #aa4f4f;
+}
+.container {
+  margin: auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+  height: 100%;
+}
+
+header {
+  height: 100vh;
+  background: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+}
+header nav {
+  background-color: rgba(70, 50, 20, 0.5);
+  color: #fbfbbc;
+  height: 5rem;
+}
+header nav ul {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-content: center;
+}
+header nav ul li {
+  list-style: none;
+  grid-column: span 2;
+}
+header nav ul li:last-child {
+  grid-column: -3/-1;
+  justify-self: end;
+}
+header nav ul li a {
+  color: #fbfbbc;
+}
+header nav ul li a:hover {
+  border-bottom: #aa4f4f solid 2px;
+  padding-bottom: 0.5rem;
+}
+header div {
+  height: 100%;
+}
+header div .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+header div .container h1 {
+  grid-column: span 12;
+  align-self: flex-end;
+}
+header div .container a {
+  grid-column: span 12;
+  align-self: flex-start;
+}
+#articles {
+  background: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+}
+#articles .container {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+#articles .container h2 {
+  grid-column: span 12;
+}
+#articles .container .article-1 {
+  grid-column: span 8;
+}
+#articles .container .article-2 {
+  grid-column: span 4;
+}
+#articles .container .article-3 {
+  grid-column: span 6;
+}
+#articles .container .article-4 {
+  grid-column: span 6;
+}
+
+footer .container {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .container .social-media a {
+  margin-right: 2rem;
 }
